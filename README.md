@@ -24,6 +24,8 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [Claude Code sessions billed with zero cache reads](./claude-code-sessions-not-hitting-cache/) — https://www.allanninal.dev/llm/claude-code-sessions-not-hitting-cache/
 - [code execution has spent its free 1,550 container hours](./code-execution-hours-exceed-free-allowance/) — https://www.allanninal.dev/llm/code-execution-hours-exceed-free-allowance/
 - [Cost lands in the default workspace and cannot be charged back](./default-workspace-cost-unattributable/) — https://www.allanninal.dev/llm/default-workspace-cost-unattributable/
+- [An empty vector store is still named in vector_store_ids](./empty-vector-store-still-referenced/) — https://www.allanninal.dev/llm/empty-vector-store-still-referenced/
+- [A CMEK key config is inert but assumed to be encrypting](./external-key-config-unattached/) — https://www.allanninal.dev/llm/external-key-config-unattached/
 - [fast mode billed at twice the rate and served as default](./fast-mode-silently-downgraded/) — https://www.allanninal.dev/llm/fast-mode-silently-downgraded/
 - [a fine-tuned model was trained, billed, and never called once](./fine-tuned-model-never-used/) — https://www.allanninal.dev/llm/fine-tuned-model-never-used/
 - [a floating model alias silently changes model under you](./floating-alias-instead-of-pinned-snapshot/) — https://www.allanninal.dev/llm/floating-alias-instead-of-pinned-snapshot/
@@ -37,6 +39,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [max_tokens is set above the model's own output cap](./max-tokens-above-model-cap/) — https://www.allanninal.dev/llm/max-tokens-above-model-cap/
 - [a model id in use is past its published shutdown date](./model-past-shutdown-date/) — https://www.allanninal.dev/llm/model-past-shutdown-date/
 - [a model you still call retires in under 90 days](./model-retiring-within-90-days/) — https://www.allanninal.dev/llm/model-retiring-within-90-days/
+- [Nothing has ever called the free moderation endpoint](./moderation-never-called/) — https://www.allanninal.dev/llm/moderation-never-called/
 - [no hard spend limit is set, so the bill has no ceiling](./no-organization-spend-limit/) — https://www.allanninal.dev/llm/no-organization-spend-limit/
 - [One project holds every environment, so nothing can be capped](./no-prod-dev-project-separation/) — https://www.allanninal.dev/llm/no-prod-dev-project-separation/
 - [A non-streaming request over 10 minutes times out with 504](./non-streaming-request-over-ten-minutes/) — https://www.allanninal.dev/llm/non-streaming-request-over-ten-minutes/
@@ -48,6 +51,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [Parallel tool calls void the strict schema guarantee](./parallel-tool-calls-with-strict-schema/) — https://www.allanninal.dev/llm/parallel-tool-calls-with-strict-schema/
 - [per-customer cost is unknowable because tenants share a key](./per-tenant-cost-attribution-impossible/) — https://www.allanninal.dev/llm/per-tenant-cost-attribution-impossible/
 - [Priority Tier never covered the model you migrated to](./priority-tier-model-unsupported/) — https://www.allanninal.dev/llm/priority-tier-model-unsupported/
+- [A model permission policy that has never excluded anything](./project-model-permissions-unrestricted/) — https://www.allanninal.dev/llm/project-model-permissions-unrestricted/
 - [Prompt sits under the model's cache minimum, so nothing caches](./prompt-below-model-cache-minimum/) — https://www.allanninal.dev/llm/prompt-below-model-cache-minimum/
 - [Cache hits fall away exactly when the fleet scales out](./prompt-cache-key-not-set/) — https://www.allanninal.dev/llm/prompt-cache-key-not-set/
 - [Every scheduled run starts on a cache that was evicted](./prompt-cache-retention-left-at-default/) — https://www.allanninal.dev/llm/prompt-cache-retention-left-at-default/
@@ -73,7 +77,11 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [Tool schemas are most of the input tokens on every call](./tool-schemas-dominate-input-tokens/) — https://www.allanninal.dev/llm/tool-schemas-dominate-input-tokens/
 - [Nobody has ever read the key lifecycle audit log](./unreviewed-key-lifecycle-in-audit-log/) — https://www.allanninal.dev/llm/unreviewed-key-lifecycle-in-audit-log/
 - [US inference geo is billing every token at 1.1x](./us-inference-geo-premium-unnoticed/) — https://www.allanninal.dev/llm/us-inference-geo-premium-unnoticed/
+- [A vector store with expires_after deletes itself on a clock](./vector-store-expired-or-expiring/) — https://www.allanninal.dev/llm/vector-store-expired-or-expiring/
+- [Files failed to index and file_search quietly returns less](./vector-store-file-attach-failed/) — https://www.allanninal.dev/llm/vector-store-file-attach-failed/
+- [Vector store bytes grow while nobody queries the index](./vector-store-storage-cost-creeping/) — https://www.allanninal.dev/llm/vector-store-storage-cost-creeping/
 - [web search is billing $10 per 1,000 searches unnoticed](./web-search-spend-unnoticed/) — https://www.allanninal.dev/llm/web-search-spend-unnoticed/
+- [Zero data retention is claimed and no project resolves to it](./zero-data-retention-not-configured/) — https://www.allanninal.dev/llm/zero-data-retention-not-configured/
 
 ## How to run one
 
