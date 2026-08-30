@@ -16,10 +16,15 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [an archived project still holds live API keys](./archived-project-still-holds-keys/) — https://www.allanninal.dev/llm/archived-project-still-holds-keys/
 - [The Assistants API is shut down. Is yours still answering?](./assistants-api-already-shut-down/) — https://www.allanninal.dev/llm/assistants-api-already-shut-down/
 - [audio and image usage never shows up in a token dashboard](./audio-and-image-line-items-unnoticed/) — https://www.allanninal.dev/llm/audio-and-image-line-items-unnoticed/
+- [The background response is queued and nothing is polling](./background-response-never-polled/) — https://www.allanninal.dev/llm/background-response-never-polled/
+- [Cancelling a batch does not unbill the rows it already ran](./batch-cancelled-partial-results/) — https://www.allanninal.dev/llm/batch-cancelled-partial-results/
 - [scheduled jobs pay full price for work the Batch API halves](./batch-discount-left-unused/) — https://www.allanninal.dev/llm/batch-discount-left-unused/
 - [the batch left an error_file_id that nothing ever fetched](./batch-error-file-never-read/) — https://www.allanninal.dev/llm/batch-error-file-never-read/
 - [a batch expired when the 24 hour completion window closed](./batch-expired-past-24h-window/) — https://www.allanninal.dev/llm/batch-expired-past-24h-window/
+- [The batch failed validation and named the broken line](./batch-failed-input-validation/) — https://www.allanninal.dev/llm/batch-failed-input-validation/
+- [The batch finished and nobody ever collected the output](./batch-output-file-never-downloaded/) — https://www.allanninal.dev/llm/batch-output-file-never-downloaded/
 - [a batch reads completed while some of its rows failed](./batch-partial-failure-unnoticed/) — https://www.allanninal.dev/llm/batch-partial-failure-unnoticed/
+- [The batch queue is full, so the next submission is refused](./batch-queue-limit-reached/) — https://www.allanninal.dev/llm/batch-queue-limit-reached/
 - [Cache read share stepped down the day the model changed](./cache-hit-rate-collapsed-after-model-change/) — https://www.allanninal.dev/llm/cache-hit-rate-collapsed-after-model-change/
 - [Cache written on every call by a prefix that keeps moving](./cache-invalidated-by-changing-prefix/) — https://www.allanninal.dev/llm/cache-invalidated-by-changing-prefix/
 - [cache writes are paid for and never read back](./cache-writes-with-no-reads/) — https://www.allanninal.dev/llm/cache-writes-with-no-reads/
@@ -28,8 +33,10 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [code execution has spent its free 1,550 container hours](./code-execution-hours-exceed-free-allowance/) — https://www.allanninal.dev/llm/code-execution-hours-exceed-free-allowance/
 - [Cost lands in the default workspace and cannot be charged back](./default-workspace-cost-unattributable/) — https://www.allanninal.dev/llm/default-workspace-cost-unattributable/
 - [An empty vector store is still named in vector_store_ids](./empty-vector-store-still-referenced/) — https://www.allanninal.dev/llm/empty-vector-store-still-referenced/
+- [An expired file still answers metadata and fails every use](./expired-files-still-referenced/) — https://www.allanninal.dev/llm/expired-files-still-referenced/
 - [A CMEK key config is inert but assumed to be encrypting](./external-key-config-unattached/) — https://www.allanninal.dev/llm/external-key-config-unattached/
 - [fast mode billed at twice the rate and served as default](./fast-mode-silently-downgraded/) — https://www.allanninal.dev/llm/fast-mode-silently-downgraded/
+- [Files pile up against a storage ceiling nothing reports](./files-accumulating-against-storage-quota/) — https://www.allanninal.dev/llm/files-accumulating-against-storage-quota/
 - [The fine-tuning job failed and error.code was never read](./fine-tune-job-failed-with-error-code/) — https://www.allanninal.dev/llm/fine-tune-job-failed-with-error-code/
 - [a fine-tuned model was trained, billed, and never called once](./fine-tuned-model-never-used/) — https://www.allanninal.dev/llm/fine-tuned-model-never-used/
 - [Fine-tuning stops taking new jobs while old ones keep serving](./fine-tuning-jobs-blocked/) — https://www.allanninal.dev/llm/fine-tuning-jobs-blocked/
@@ -53,6 +60,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [one line item or project is most of the organization's bill](./one-model-or-project-dominates-cost/) — https://www.allanninal.dev/llm/one-model-or-project-dominates-cost/
 - [Organization invites sat pending until they expired](./openai-invites-pending-past-expiry/) — https://www.allanninal.dev/llm/openai-invites-pending-past-expiry/
 - [Model visible, streaming refused: the org is unverified](./org-verification-required/) — https://www.allanninal.dev/llm/org-verification-required/
+- [purpose=assistants files outlived the API that owned them](./orphaned-assistants-purpose-files/) — https://www.allanninal.dev/llm/orphaned-assistants-purpose-files/
 - [output tokens per minute is the real ceiling, not RPM](./otpm-exhausted/) — https://www.allanninal.dev/llm/otpm-exhausted/
 - [output tokens, not input, are what the bill is made of](./output-tokens-dominate-cost/) — https://www.allanninal.dev/llm/output-tokens-dominate-cost/
 - [529 overloaded errors arrive in clusters and get dropped](./overloaded-529-clusters/) — https://www.allanninal.dev/llm/overloaded-529-clusters/
@@ -82,6 +90,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [A service account key that has never been rotated](./service-account-key-never-rotated/) — https://www.allanninal.dev/llm/service-account-key-never-rotated/
 - [The Videos API closes and no successor model is listed](./sora-videos-api-no-replacement/) — https://www.allanninal.dev/llm/sora-videos-api-no-replacement/
 - [spend jumped week over week and no release explains it](./spend-spike-week-over-week/) — https://www.allanninal.dev/llm/spend-spike-week-over-week/
+- [Every response is stored and no endpoint will list them](./stored-responses-accumulating/) — https://www.allanninal.dev/llm/stored-responses-accumulating/
 - [streamed responses report no usage and the dashboard undercounts](./streaming-usage-lost/) — https://www.allanninal.dev/llm/streaming-usage-lost/
 - [strict omitted, so the JSON schema is only a suggestion](./strict-false-schema-silently-ignored/) — https://www.allanninal.dev/llm/strict-false-schema-silently-ignored/
 - [JSON cut off mid-object because the ceiling was reached](./structured-output-truncated-by-length/) — https://www.allanninal.dev/llm/structured-output-truncated-by-length/
