@@ -16,8 +16,11 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [the batch left an error_file_id that nothing ever fetched](./batch-error-file-never-read/) — https://www.allanninal.dev/llm/batch-error-file-never-read/
 - [a batch expired when the 24 hour completion window closed](./batch-expired-past-24h-window/) — https://www.allanninal.dev/llm/batch-expired-past-24h-window/
 - [a batch reads completed while some of its rows failed](./batch-partial-failure-unnoticed/) — https://www.allanninal.dev/llm/batch-partial-failure-unnoticed/
+- [Cache read share stepped down the day the model changed](./cache-hit-rate-collapsed-after-model-change/) — https://www.allanninal.dev/llm/cache-hit-rate-collapsed-after-model-change/
 - [Cache written on every call by a prefix that keeps moving](./cache-invalidated-by-changing-prefix/) — https://www.allanninal.dev/llm/cache-invalidated-by-changing-prefix/
 - [cache writes are paid for and never read back](./cache-writes-with-no-reads/) — https://www.allanninal.dev/llm/cache-writes-with-no-reads/
+- [Claude Code edits rejected more often than they are kept](./claude-code-edit-rejection-rate-high/) — https://www.allanninal.dev/llm/claude-code-edit-rejection-rate-high/
+- [Claude Code sessions billed with zero cache reads](./claude-code-sessions-not-hitting-cache/) — https://www.allanninal.dev/llm/claude-code-sessions-not-hitting-cache/
 - [code execution has spent its free 1,550 container hours](./code-execution-hours-exceed-free-allowance/) — https://www.allanninal.dev/llm/code-execution-hours-exceed-free-allowance/
 - [fast mode billed at twice the rate and served as default](./fast-mode-silently-downgraded/) — https://www.allanninal.dev/llm/fast-mode-silently-downgraded/
 - [a fine-tuned model was trained, billed, and never called once](./fine-tuned-model-never-used/) — https://www.allanninal.dev/llm/fine-tuned-model-never-used/
@@ -26,6 +29,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [ITPM runs out because uncached input is never cached](./itpm-exhausted-uncached-input/) — https://www.allanninal.dev/llm/itpm-exhausted-uncached-input/
 - [keys still work after their owner loses project access](./key-owner-lost-project-access/) — https://www.allanninal.dev/llm/key-owner-lost-project-access/
 - [A live project's usage buckets have been empty for days](./live-project-zero-usage-buckets/) — https://www.allanninal.dev/llm/live-project-zero-usage-buckets/
+- [The 1M context window is capped at 200k in your own code](./long-context-gated-on-obsolete-beta/) — https://www.allanninal.dev/llm/long-context-gated-on-obsolete-beta/
 - [most of your input tokens sit in the 200k-1M band](./long-context-requests-unwatched/) — https://www.allanninal.dev/llm/long-context-requests-unwatched/
 - [max_tokens is set above the model's own output cap](./max-tokens-above-model-cap/) — https://www.allanninal.dev/llm/max-tokens-above-model-cap/
 - [a model id in use is past its published shutdown date](./model-past-shutdown-date/) — https://www.allanninal.dev/llm/model-past-shutdown-date/
@@ -38,6 +42,10 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [529 overloaded errors arrive in clusters and get dropped](./overloaded-529-clusters/) — https://www.allanninal.dev/llm/overloaded-529-clusters/
 - [Parallel tool calls void the strict schema guarantee](./parallel-tool-calls-with-strict-schema/) — https://www.allanninal.dev/llm/parallel-tool-calls-with-strict-schema/
 - [per-customer cost is unknowable because tenants share a key](./per-tenant-cost-attribution-impossible/) — https://www.allanninal.dev/llm/per-tenant-cost-attribution-impossible/
+- [Priority Tier never covered the model you migrated to](./priority-tier-model-unsupported/) — https://www.allanninal.dev/llm/priority-tier-model-unsupported/
+- [Prompt sits under the model's cache minimum, so nothing caches](./prompt-below-model-cache-minimum/) — https://www.allanninal.dev/llm/prompt-below-model-cache-minimum/
+- [Cache hits fall away exactly when the fleet scales out](./prompt-cache-key-not-set/) — https://www.allanninal.dev/llm/prompt-cache-key-not-set/
+- [Every scheduled run starts on a cache that was evicted](./prompt-cache-retention-left-at-default/) — https://www.allanninal.dev/llm/prompt-cache-retention-left-at-default/
 - [prompt caching was never switched on anywhere](./prompt-caching-never-used/) — https://www.allanninal.dev/llm/prompt-caching-never-used/
 - [Prompts overflow the context window and 400 as too long](./prompt-too-long-context-overflow/) — https://www.allanninal.dev/llm/prompt-too-long-context-overflow/
 - [429 credit_balance_exhausted retried forever as a rate limit](./quota-exhausted-not-rate-limited/) — https://www.allanninal.dev/llm/quota-exhausted-not-rate-limited/
