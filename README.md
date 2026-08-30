@@ -10,6 +10,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 [![Follow on GitHub](https://img.shields.io/github/followers/allanninal?label=Follow%20%40allanninal&style=social)](https://github.com/allanninal)
 ## The fixes
 
+- [API keys that no request has ever used](./api-key-never-used/) — https://www.allanninal.dev/llm/api-key-never-used/
 - [an archived project still holds live API keys](./archived-project-still-holds-keys/) — https://www.allanninal.dev/llm/archived-project-still-holds-keys/
 - [audio and image usage never shows up in a token dashboard](./audio-and-image-line-items-unnoticed/) — https://www.allanninal.dev/llm/audio-and-image-line-items-unnoticed/
 - [scheduled jobs pay full price for work the Batch API halves](./batch-discount-left-unused/) — https://www.allanninal.dev/llm/batch-discount-left-unused/
@@ -22,12 +23,14 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [Claude Code edits rejected more often than they are kept](./claude-code-edit-rejection-rate-high/) — https://www.allanninal.dev/llm/claude-code-edit-rejection-rate-high/
 - [Claude Code sessions billed with zero cache reads](./claude-code-sessions-not-hitting-cache/) — https://www.allanninal.dev/llm/claude-code-sessions-not-hitting-cache/
 - [code execution has spent its free 1,550 container hours](./code-execution-hours-exceed-free-allowance/) — https://www.allanninal.dev/llm/code-execution-hours-exceed-free-allowance/
+- [Cost lands in the default workspace and cannot be charged back](./default-workspace-cost-unattributable/) — https://www.allanninal.dev/llm/default-workspace-cost-unattributable/
 - [fast mode billed at twice the rate and served as default](./fast-mode-silently-downgraded/) — https://www.allanninal.dev/llm/fast-mode-silently-downgraded/
 - [a fine-tuned model was trained, billed, and never called once](./fine-tuned-model-never-used/) — https://www.allanninal.dev/llm/fine-tuned-model-never-used/
 - [a floating model alias silently changes model under you](./floating-alias-instead-of-pinned-snapshot/) — https://www.allanninal.dev/llm/floating-alias-instead-of-pinned-snapshot/
 - [a frontier model is answering twenty-token questions](./frontier-model-on-trivial-workload/) — https://www.allanninal.dev/llm/frontier-model-on-trivial-workload/
 - [ITPM runs out because uncached input is never cached](./itpm-exhausted-uncached-input/) — https://www.allanninal.dev/llm/itpm-exhausted-uncached-input/
 - [keys still work after their owner loses project access](./key-owner-lost-project-access/) — https://www.allanninal.dev/llm/key-owner-lost-project-access/
+- [Production keys owned by people, not service accounts](./legacy-user-owned-keys-in-project/) — https://www.allanninal.dev/llm/legacy-user-owned-keys-in-project/
 - [A live project's usage buckets have been empty for days](./live-project-zero-usage-buckets/) — https://www.allanninal.dev/llm/live-project-zero-usage-buckets/
 - [The 1M context window is capped at 200k in your own code](./long-context-gated-on-obsolete-beta/) — https://www.allanninal.dev/llm/long-context-gated-on-obsolete-beta/
 - [most of your input tokens sit in the 200k-1M band](./long-context-requests-unwatched/) — https://www.allanninal.dev/llm/long-context-requests-unwatched/
@@ -35,8 +38,10 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [a model id in use is past its published shutdown date](./model-past-shutdown-date/) — https://www.allanninal.dev/llm/model-past-shutdown-date/
 - [a model you still call retires in under 90 days](./model-retiring-within-90-days/) — https://www.allanninal.dev/llm/model-retiring-within-90-days/
 - [no hard spend limit is set, so the bill has no ceiling](./no-organization-spend-limit/) — https://www.allanninal.dev/llm/no-organization-spend-limit/
+- [One project holds every environment, so nothing can be capped](./no-prod-dev-project-separation/) — https://www.allanninal.dev/llm/no-prod-dev-project-separation/
 - [A non-streaming request over 10 minutes times out with 504](./non-streaming-request-over-ten-minutes/) — https://www.allanninal.dev/llm/non-streaming-request-over-ten-minutes/
 - [one line item or project is most of the organization's bill](./one-model-or-project-dominates-cost/) — https://www.allanninal.dev/llm/one-model-or-project-dominates-cost/
+- [Organization invites sat pending until they expired](./openai-invites-pending-past-expiry/) — https://www.allanninal.dev/llm/openai-invites-pending-past-expiry/
 - [output tokens per minute is the real ceiling, not RPM](./otpm-exhausted/) — https://www.allanninal.dev/llm/otpm-exhausted/
 - [output tokens, not input, are what the bill is made of](./output-tokens-dominate-cost/) — https://www.allanninal.dev/llm/output-tokens-dominate-cost/
 - [529 overloaded errors arrive in clusters and get dropped](./overloaded-529-clusters/) — https://www.allanninal.dev/llm/overloaded-529-clusters/
@@ -57,13 +62,16 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [A 32 MB request is rejected with 413 before Anthropic sees it](./request-too-large-413/) — https://www.allanninal.dev/llm/request-too-large-413/
 - [Request count tripled while token volume stayed flat](./requests-diverge-from-token-volume/) — https://www.allanninal.dev/llm/requests-diverge-from-token-volume/
 - [a retired model id still sitting in the code](./retired-model-id-still-in-code/) — https://www.allanninal.dev/llm/retired-model-id-still-in-code/
+- [A service account key that has never been rotated](./service-account-key-never-rotated/) — https://www.allanninal.dev/llm/service-account-key-never-rotated/
 - [spend jumped week over week and no release explains it](./spend-spike-week-over-week/) — https://www.allanninal.dev/llm/spend-spike-week-over-week/
 - [streamed responses report no usage and the dashboard undercounts](./streaming-usage-lost/) — https://www.allanninal.dev/llm/streaming-usage-lost/
 - [strict omitted, so the JSON schema is only a suggestion](./strict-false-schema-silently-ignored/) — https://www.allanninal.dev/llm/strict-false-schema-silently-ignored/
 - [JSON cut off mid-object because the ceiling was reached](./structured-output-truncated-by-length/) — https://www.allanninal.dev/llm/structured-output-truncated-by-length/
+- [Almost everyone in the organization holds the owner role](./too-many-organization-owners/) — https://www.allanninal.dev/llm/too-many-organization-owners/
 - [Tool-call arguments that parse and still break the schema](./tool-call-arguments-unparseable/) — https://www.allanninal.dev/llm/tool-call-arguments-unparseable/
 - [Tool shipped on every request and never once called](./tool-defined-but-never-called/) — https://www.allanninal.dev/llm/tool-defined-but-never-called/
 - [Tool schemas are most of the input tokens on every call](./tool-schemas-dominate-input-tokens/) — https://www.allanninal.dev/llm/tool-schemas-dominate-input-tokens/
+- [Nobody has ever read the key lifecycle audit log](./unreviewed-key-lifecycle-in-audit-log/) — https://www.allanninal.dev/llm/unreviewed-key-lifecycle-in-audit-log/
 - [US inference geo is billing every token at 1.1x](./us-inference-geo-premium-unnoticed/) — https://www.allanninal.dev/llm/us-inference-geo-premium-unnoticed/
 - [web search is billing $10 per 1,000 searches unnoticed](./web-search-spend-unnoticed/) — https://www.allanninal.dev/llm/web-search-spend-unnoticed/
 
