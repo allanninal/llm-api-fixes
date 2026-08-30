@@ -10,6 +10,8 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 [![Follow on GitHub](https://img.shields.io/github/followers/allanninal?label=Follow%20%40allanninal&style=social)](https://github.com/allanninal)
 ## The fixes
 
+- [429s while every minute sits under the configured limit](./acceleration-limit-on-traffic-spike/) — https://www.allanninal.dev/llm/acceleration-limit-on-traffic-spike/
+- [anthropic-version is missing, ancient, or added in transit](./anthropic-version-header-missing-or-ancient/) — https://www.allanninal.dev/llm/anthropic-version-header-missing-or-ancient/
 - [API keys that no request has ever used](./api-key-never-used/) — https://www.allanninal.dev/llm/api-key-never-used/
 - [an archived project still holds live API keys](./archived-project-still-holds-keys/) — https://www.allanninal.dev/llm/archived-project-still-holds-keys/
 - [audio and image usage never shows up in a token dashboard](./audio-and-image-line-items-unnoticed/) — https://www.allanninal.dev/llm/audio-and-image-line-items-unnoticed/
@@ -28,8 +30,10 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [A CMEK key config is inert but assumed to be encrypting](./external-key-config-unattached/) — https://www.allanninal.dev/llm/external-key-config-unattached/
 - [fast mode billed at twice the rate and served as default](./fast-mode-silently-downgraded/) — https://www.allanninal.dev/llm/fast-mode-silently-downgraded/
 - [a fine-tuned model was trained, billed, and never called once](./fine-tuned-model-never-used/) — https://www.allanninal.dev/llm/fine-tuned-model-never-used/
+- [The flex tier fails by not being served, and bills nothing](./flex-resource-unavailable-timeouts/) — https://www.allanninal.dev/llm/flex-resource-unavailable-timeouts/
 - [a floating model alias silently changes model under you](./floating-alias-instead-of-pinned-snapshot/) — https://www.allanninal.dev/llm/floating-alias-instead-of-pinned-snapshot/
 - [a frontier model is answering twenty-token questions](./frontier-model-on-trivial-workload/) — https://www.allanninal.dev/llm/frontier-model-on-trivial-workload/
+- [The anthropic-beta value that 400s, and the one that went GA](./invalid-beta-header-value/) — https://www.allanninal.dev/llm/invalid-beta-header-value/
 - [ITPM runs out because uncached input is never cached](./itpm-exhausted-uncached-input/) — https://www.allanninal.dev/llm/itpm-exhausted-uncached-input/
 - [keys still work after their owner loses project access](./key-owner-lost-project-access/) — https://www.allanninal.dev/llm/key-owner-lost-project-access/
 - [Production keys owned by people, not service accounts](./legacy-user-owned-keys-in-project/) — https://www.allanninal.dev/llm/legacy-user-owned-keys-in-project/
@@ -45,6 +49,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [A non-streaming request over 10 minutes times out with 504](./non-streaming-request-over-ten-minutes/) — https://www.allanninal.dev/llm/non-streaming-request-over-ten-minutes/
 - [one line item or project is most of the organization's bill](./one-model-or-project-dominates-cost/) — https://www.allanninal.dev/llm/one-model-or-project-dominates-cost/
 - [Organization invites sat pending until they expired](./openai-invites-pending-past-expiry/) — https://www.allanninal.dev/llm/openai-invites-pending-past-expiry/
+- [Model visible, streaming refused: the org is unverified](./org-verification-required/) — https://www.allanninal.dev/llm/org-verification-required/
 - [output tokens per minute is the real ceiling, not RPM](./otpm-exhausted/) — https://www.allanninal.dev/llm/otpm-exhausted/
 - [output tokens, not input, are what the bill is made of](./output-tokens-dominate-cost/) — https://www.allanninal.dev/llm/output-tokens-dominate-cost/
 - [529 overloaded errors arrive in clusters and get dropped](./overloaded-529-clusters/) — https://www.allanninal.dev/llm/overloaded-529-clusters/
@@ -52,6 +57,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [per-customer cost is unknowable because tenants share a key](./per-tenant-cost-attribution-impossible/) — https://www.allanninal.dev/llm/per-tenant-cost-attribution-impossible/
 - [Priority Tier never covered the model you migrated to](./priority-tier-model-unsupported/) — https://www.allanninal.dev/llm/priority-tier-model-unsupported/
 - [A model permission policy that has never excluded anything](./project-model-permissions-unrestricted/) — https://www.allanninal.dev/llm/project-model-permissions-unrestricted/
+- [A project or workspace ceiling set below the org limit](./project-rate-limit-below-org/) — https://www.allanninal.dev/llm/project-rate-limit-below-org/
 - [Prompt sits under the model's cache minimum, so nothing caches](./prompt-below-model-cache-minimum/) — https://www.allanninal.dev/llm/prompt-below-model-cache-minimum/
 - [Cache hits fall away exactly when the fleet scales out](./prompt-cache-key-not-set/) — https://www.allanninal.dev/llm/prompt-cache-key-not-set/
 - [Every scheduled run starts on a cache that was evicted](./prompt-cache-retention-left-at-default/) — https://www.allanninal.dev/llm/prompt-cache-retention-left-at-default/
@@ -66,6 +72,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [A 32 MB request is rejected with 413 before Anthropic sees it](./request-too-large-413/) — https://www.allanninal.dev/llm/request-too-large-413/
 - [Request count tripled while token volume stayed flat](./requests-diverge-from-token-volume/) — https://www.allanninal.dev/llm/requests-diverge-from-token-volume/
 - [a retired model id still sitting in the code](./retired-model-id-still-in-code/) — https://www.allanninal.dev/llm/retired-model-id-still-in-code/
+- [The gateway strips the header your backoff depends on](./retry-after-header-ignored/) — https://www.allanninal.dev/llm/retry-after-header-ignored/
 - [A service account key that has never been rotated](./service-account-key-never-rotated/) — https://www.allanninal.dev/llm/service-account-key-never-rotated/
 - [spend jumped week over week and no release explains it](./spend-spike-week-over-week/) — https://www.allanninal.dev/llm/spend-spike-week-over-week/
 - [streamed responses report no usage and the dashboard undercounts](./streaming-usage-lost/) — https://www.allanninal.dev/llm/streaming-usage-lost/
@@ -76,6 +83,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [Tool shipped on every request and never once called](./tool-defined-but-never-called/) — https://www.allanninal.dev/llm/tool-defined-but-never-called/
 - [Tool schemas are most of the input tokens on every call](./tool-schemas-dominate-input-tokens/) — https://www.allanninal.dev/llm/tool-schemas-dominate-input-tokens/
 - [Nobody has ever read the key lifecycle audit log](./unreviewed-key-lifecycle-in-audit-log/) — https://www.allanninal.dev/llm/unreviewed-key-lifecycle-in-audit-log/
+- [The same key works on your laptop and 403s in production](./unsupported-country-region/) — https://www.allanninal.dev/llm/unsupported-country-region/
 - [US inference geo is billing every token at 1.1x](./us-inference-geo-premium-unnoticed/) — https://www.allanninal.dev/llm/us-inference-geo-premium-unnoticed/
 - [A vector store with expires_after deletes itself on a clock](./vector-store-expired-or-expiring/) — https://www.allanninal.dev/llm/vector-store-expired-or-expiring/
 - [Files failed to index and file_search quietly returns less](./vector-store-file-attach-failed/) — https://www.allanninal.dev/llm/vector-store-file-attach-failed/
