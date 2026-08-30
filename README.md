@@ -14,6 +14,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [anthropic-version is missing, ancient, or added in transit](./anthropic-version-header-missing-or-ancient/) — https://www.allanninal.dev/llm/anthropic-version-header-missing-or-ancient/
 - [API keys that no request has ever used](./api-key-never-used/) — https://www.allanninal.dev/llm/api-key-never-used/
 - [an archived project still holds live API keys](./archived-project-still-holds-keys/) — https://www.allanninal.dev/llm/archived-project-still-holds-keys/
+- [The Assistants API is shut down. Is yours still answering?](./assistants-api-already-shut-down/) — https://www.allanninal.dev/llm/assistants-api-already-shut-down/
 - [audio and image usage never shows up in a token dashboard](./audio-and-image-line-items-unnoticed/) — https://www.allanninal.dev/llm/audio-and-image-line-items-unnoticed/
 - [scheduled jobs pay full price for work the Batch API halves](./batch-discount-left-unused/) — https://www.allanninal.dev/llm/batch-discount-left-unused/
 - [the batch left an error_file_id that nothing ever fetched](./batch-error-file-never-read/) — https://www.allanninal.dev/llm/batch-error-file-never-read/
@@ -29,7 +30,9 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [An empty vector store is still named in vector_store_ids](./empty-vector-store-still-referenced/) — https://www.allanninal.dev/llm/empty-vector-store-still-referenced/
 - [A CMEK key config is inert but assumed to be encrypting](./external-key-config-unattached/) — https://www.allanninal.dev/llm/external-key-config-unattached/
 - [fast mode billed at twice the rate and served as default](./fast-mode-silently-downgraded/) — https://www.allanninal.dev/llm/fast-mode-silently-downgraded/
+- [The fine-tuning job failed and error.code was never read](./fine-tune-job-failed-with-error-code/) — https://www.allanninal.dev/llm/fine-tune-job-failed-with-error-code/
 - [a fine-tuned model was trained, billed, and never called once](./fine-tuned-model-never-used/) — https://www.allanninal.dev/llm/fine-tuned-model-never-used/
+- [Fine-tuning stops taking new jobs while old ones keep serving](./fine-tuning-jobs-blocked/) — https://www.allanninal.dev/llm/fine-tuning-jobs-blocked/
 - [The flex tier fails by not being served, and bills nothing](./flex-resource-unavailable-timeouts/) — https://www.allanninal.dev/llm/flex-resource-unavailable-timeouts/
 - [a floating model alias silently changes model under you](./floating-alias-instead-of-pinned-snapshot/) — https://www.allanninal.dev/llm/floating-alias-instead-of-pinned-snapshot/
 - [a frontier model is answering twenty-token questions](./frontier-model-on-trivial-workload/) — https://www.allanninal.dev/llm/frontier-model-on-trivial-workload/
@@ -55,6 +58,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [529 overloaded errors arrive in clusters and get dropped](./overloaded-529-clusters/) — https://www.allanninal.dev/llm/overloaded-529-clusters/
 - [Parallel tool calls void the strict schema guarantee](./parallel-tool-calls-with-strict-schema/) — https://www.allanninal.dev/llm/parallel-tool-calls-with-strict-schema/
 - [per-customer cost is unknowable because tenants share a key](./per-tenant-cost-attribution-impossible/) — https://www.allanninal.dev/llm/per-tenant-cost-attribution-impossible/
+- [previous_response_id 404s once the parent has aged out](./previous-response-id-chain-broken/) — https://www.allanninal.dev/llm/previous-response-id-chain-broken/
 - [Priority Tier never covered the model you migrated to](./priority-tier-model-unsupported/) — https://www.allanninal.dev/llm/priority-tier-model-unsupported/
 - [A model permission policy that has never excluded anything](./project-model-permissions-unrestricted/) — https://www.allanninal.dev/llm/project-model-permissions-unrestricted/
 - [A project or workspace ceiling set below the org limit](./project-rate-limit-below-org/) — https://www.allanninal.dev/llm/project-rate-limit-below-org/
@@ -63,6 +67,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [Every scheduled run starts on a cache that was evicted](./prompt-cache-retention-left-at-default/) — https://www.allanninal.dev/llm/prompt-cache-retention-left-at-default/
 - [prompt caching was never switched on anywhere](./prompt-caching-never-used/) — https://www.allanninal.dev/llm/prompt-caching-never-used/
 - [Prompts overflow the context window and 400 as too long](./prompt-too-long-context-overflow/) — https://www.allanninal.dev/llm/prompt-too-long-context-overflow/
+- [Prompts, Evals and Agent Builder close: export, not rewrite](./prompts-evals-agentbuilder-sunset/) — https://www.allanninal.dev/llm/prompts-evals-agentbuilder-sunset/
 - [429 credit_balance_exhausted retried forever as a rate limit](./quota-exhausted-not-rate-limited/) — https://www.allanninal.dev/llm/quota-exhausted-not-rate-limited/
 - [429s are retried blindly without reading which limit hit](./rate-limit-429-limiter-unidentified/) — https://www.allanninal.dev/llm/rate-limit-429-limiter-unidentified/
 - [x-ratelimit-remaining sits near zero before any 429](./rate-limit-headers-near-exhaustion/) — https://www.allanninal.dev/llm/rate-limit-headers-near-exhaustion/
@@ -73,11 +78,14 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 - [Request count tripled while token volume stayed flat](./requests-diverge-from-token-volume/) — https://www.allanninal.dev/llm/requests-diverge-from-token-volume/
 - [a retired model id still sitting in the code](./retired-model-id-still-in-code/) — https://www.allanninal.dev/llm/retired-model-id-still-in-code/
 - [The gateway strips the header your backoff depends on](./retry-after-header-ignored/) — https://www.allanninal.dev/llm/retry-after-header-ignored/
+- [system_fingerprint moved and seed stopped reproducing](./seed-determinism-unreliable/) — https://www.allanninal.dev/llm/seed-determinism-unreliable/
 - [A service account key that has never been rotated](./service-account-key-never-rotated/) — https://www.allanninal.dev/llm/service-account-key-never-rotated/
+- [The Videos API closes and no successor model is listed](./sora-videos-api-no-replacement/) — https://www.allanninal.dev/llm/sora-videos-api-no-replacement/
 - [spend jumped week over week and no release explains it](./spend-spike-week-over-week/) — https://www.allanninal.dev/llm/spend-spike-week-over-week/
 - [streamed responses report no usage and the dashboard undercounts](./streaming-usage-lost/) — https://www.allanninal.dev/llm/streaming-usage-lost/
 - [strict omitted, so the JSON schema is only a suggestion](./strict-false-schema-silently-ignored/) — https://www.allanninal.dev/llm/strict-false-schema-silently-ignored/
 - [JSON cut off mid-object because the ceiling was reached](./structured-output-truncated-by-length/) — https://www.allanninal.dev/llm/structured-output-truncated-by-length/
+- [The same body counts 30% more tokens on the newer model](./token-counts-reused-across-tokenizers/) — https://www.allanninal.dev/llm/token-counts-reused-across-tokenizers/
 - [Almost everyone in the organization holds the owner role](./too-many-organization-owners/) — https://www.allanninal.dev/llm/too-many-organization-owners/
 - [Tool-call arguments that parse and still break the schema](./tool-call-arguments-unparseable/) — https://www.allanninal.dev/llm/tool-call-arguments-unparseable/
 - [Tool shipped on every request and never once called](./tool-defined-but-never-called/) — https://www.allanninal.dev/llm/tool-defined-but-never-called/
