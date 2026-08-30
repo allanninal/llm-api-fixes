@@ -11,6 +11,10 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/llm](https:/
 ## The fixes
 
 - [an archived project still holds live API keys](./archived-project-still-holds-keys/) — https://www.allanninal.dev/llm/archived-project-still-holds-keys/
+- [scheduled jobs pay full price for work the Batch API halves](./batch-discount-left-unused/) — https://www.allanninal.dev/llm/batch-discount-left-unused/
+- [the batch left an error_file_id that nothing ever fetched](./batch-error-file-never-read/) — https://www.allanninal.dev/llm/batch-error-file-never-read/
+- [a batch expired when the 24 hour completion window closed](./batch-expired-past-24h-window/) — https://www.allanninal.dev/llm/batch-expired-past-24h-window/
+- [a batch reads completed while some of its rows failed](./batch-partial-failure-unnoticed/) — https://www.allanninal.dev/llm/batch-partial-failure-unnoticed/
 - [cache writes are paid for and never read back](./cache-writes-with-no-reads/) — https://www.allanninal.dev/llm/cache-writes-with-no-reads/
 - [a floating model alias silently changes model under you](./floating-alias-instead-of-pinned-snapshot/) — https://www.allanninal.dev/llm/floating-alias-instead-of-pinned-snapshot/
 - [keys still work after their owner loses project access](./key-owner-lost-project-access/) — https://www.allanninal.dev/llm/key-owner-lost-project-access/
