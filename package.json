@@ -1,0 +1,11 @@
+{
+  "name": "llm-api-fixes",
+  "version": "1.0.0",
+  "description": "Read-only Python and Node.js scripts that find OpenAI and Anthropic problems through the API \u2014 retired models, runaway spend, quota exhaustion misread as a rate limit, and prompt caching that never pays back. They report and print the repair; they never write",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
